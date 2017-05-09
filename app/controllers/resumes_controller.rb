@@ -1,5 +1,7 @@
 class ResumesController < ApplicationController
 
-  ###controller info
+  def index
+    render "index.html.erb"
+  end 
 
 end
