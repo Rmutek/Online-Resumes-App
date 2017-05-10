@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     el: '#app',
     data: {
       resumes: [],
-      message: 'Hello Vue!'
+      message: 'Resume'
     },
     mounted: function() {
       $.get("api/v1/resumes", function(responseData) {
