@@ -11,7 +11,8 @@ json.array! @resumes.each do |resume|
   json.resume_url resume["resume_url"]
   json.github_url resume["github_url"]
   json.photo_url resume["photo_url"]
-  json.experiences.id resume["experiences.id"]
-  json.experiences.start_date resume["experiences.start_date"]
-
+  json.experiences resume["experiences"].each do |experience|
+    json.experiences_id experience["id"]
+    json.experiences_start_date experience["start_date"]
+  end
 end
