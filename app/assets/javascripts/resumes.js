@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     el: '#app',
     data: {
       resumes: [],
-      message: 'Resume'
+      message: 'FirstName LastNames Resume'
     },
     mounted: function() {
-      $.get("api/v1/resumes", function(responseData) {
+      $.get("http://localhost:3000/api/v1/resumes", function(responseData) {
         this.resumes = responseData;
       });
     }
