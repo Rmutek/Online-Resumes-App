@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     mounted: function() {
       $.get("http://localhost:3000/api/v1/resumes", function(responseData) {
         this.resumes = responseData;
-      });
+        console.log(this.resumes);
+        console.log(this.resumes[0].first_name);
+      }.bind(this));
     }
   });
 });
