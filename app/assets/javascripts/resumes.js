@@ -15,9 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       });
     },
     methods: {
-
-
-
+      
     }
   });
 });
