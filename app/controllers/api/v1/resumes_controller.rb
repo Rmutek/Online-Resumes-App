@@ -6,8 +6,8 @@ class Api::V1::ResumesController < ApplicationController
   end
 
   def show
-    def show
-    @resume = Unirest.get("https://resume-data-api-tubular-trio.herokuapp.com/resumes/#{params[:id]}").body
+    resume_id = params[:id]
+    @resume = Unirest.get("https://resume-data-api-tubular-trio.herokuapp.com/resumes/#{resume_id}").body
     render "show.json.jbuilder"
   end
 
