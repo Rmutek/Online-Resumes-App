@@ -6,6 +6,7 @@ class ResumesController < ApplicationController
   end 
 
   def show
+    @resume_id = params[:id]
     render "show.html.erb"
   end 
 
