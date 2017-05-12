@@ -125,7 +125,7 @@
         <div class="col-md-8 col-md-offset-2">
           <div class="fh5co-hero-wrap">
             <div class="fh5co-hero-intro">
-              <h1 class="to-animate hero-animate-1">{{ message }}</h1>
+              <h1 class="to-animate hero-animate-1">{{ resumes[0] ? resumes[0].first_name : "" }}</h1>
            <!--    <h2 class="to-animate hero-animate-2">Lovely Made by <a href="http://freehtml5.co" target="_blank">FREEHTML5.co</a></h2> -->
               <p class="to-animate hero-animate-3"><a href="#" class="btn btn-outline btn-lg">Download my Resume (PDF)</a></p>
             </div>
@@ -144,8 +144,9 @@
               <div class="fh5co-spacer fh5co-spacer-xs"></div>
               <div class="owl-carousel-fullwidth animate-box">
               <div class="item">
-                <p class="text-center quote">FirstName LastName</p>
-                <p class="text-center quote">Short Bio</p>
+                <p class="text-center quote">{{ resumes[0] ? resumes[0].first_name : "" }} {{ resumes[0] ? resumes[0].last_name : "" }} </p>
+                <p class="text-center quote"> </p>
+                <!-- <p class="text-center quote">Short Bio</p> -->
               </div>
               <div class="item">
                 <p class="text-center quote">Contact Info</p>
@@ -169,15 +170,15 @@
             <div class="fh5co-feature-icon">
               <i class="ti-mobile"></i>
             </div>
-            <h3 class="heading">Mobile</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam.</p>
+            <h3 class="heading">{{ resumes[0] ? resumes[0].skills[0].skill : "" }}</h3>
+            <!-- <p></p> -->
           </div>
           <div class="col-md-4 col-sm-6 text-center fh5co-feature feature-box"> 
             <div class="fh5co-feature-icon">
               <i class="ti-lock"></i>
             </div>
-            <h3 class="heading">Lock</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam. </p>
+            <h3 class="heading">{{ resumes[0] ? resumes[0].skills[1].skill : "" }}</h3>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam. </p> -->
           </div>
 
           <div class="clearfix visible-sm-block"></div>
@@ -186,36 +187,36 @@
             <div class="fh5co-feature-icon">
               <i class="ti-video-camera"></i>
             </div>
-            <h3 class="heading">Video</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam.</p>
+            <h3 class="heading">{{ resumes[0] ? resumes[0].skills[2].skill : "" }}</h3>
+            <!-- 654321q   -->
           </div>
 
           <div class="clearfix visible-md-block visible-lg-block"></div>
 
-          <div class="col-md-4 col-sm-6 text-center fh5co-feature feature-box">
+<!--           <div class="col-md-4 col-sm-6 text-center fh5co-feature feature-box">
             <div class="fh5co-feature-icon">
               <i class="ti-shopping-cart"></i>
             </div>
             <h3 class="heading">Shop</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam. </p>
-          </div>
+          </div> -->
 
           <div class="clearfix visible-sm-block"></div>
 
-          <div class="col-md-4 col-sm-6 text-center fh5co-feature feature-box"> 
+<!--           <div class="col-md-4 col-sm-6 text-center fh5co-feature feature-box"> 
             <div class="fh5co-feature-icon">
               <i class="ti-palette"></i>
             </div>
             <h3 class="heading">Pallete</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam.</p>
-          </div>
-          <div class="col-md-4 col-sm-6 text-center fh5co-feature feature-box"> 
+          </div> -->
+<!--           <div class="col-md-4 col-sm-6 text-center fh5co-feature feature-box"> 
             <div class="fh5co-feature-icon">
               <i class="ti-truck"></i>
             </div>
             <h3 class="heading">Deliver</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam.</p>
-          </div>
+          </div> -->
         </div>
         <!-- END row -->
 
@@ -327,6 +328,7 @@
         <div class="fh5co-spacer fh5co-spacer-md"></div>
       </div>
     </footer>
+    </div>
       
       
     <!-- jQuery -->
@@ -352,6 +354,5 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
-    </div>
   </body>
 </html>
